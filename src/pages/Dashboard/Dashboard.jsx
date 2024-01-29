@@ -1,10 +1,9 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import BarChart from '../../components/BarChart/Barchart'
-import Sidebar from '../../components/Sidebar/sidebar'
 import styles from './Dashboard.module.css'
+
 
 function Dashboard() {
 
@@ -133,7 +132,7 @@ function Dashboard() {
                 <button>Lihat Lebih Lengkap</button>
               </div>
               <div className={styles.dataWrapper}>
-              
+
               </div>
               </div>
             </div>
