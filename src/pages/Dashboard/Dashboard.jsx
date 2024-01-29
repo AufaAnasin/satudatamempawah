@@ -43,7 +43,7 @@ function Dashboard() {
   return (
     <>
     <div className={styles.dashboardContainer}>
-      <Sidebar />
+      {/* <Sidebar /> */}
       <div className={styles.contentWrapper}>
         <div className={styles.topbar}>
           <div className="inputContainer">
