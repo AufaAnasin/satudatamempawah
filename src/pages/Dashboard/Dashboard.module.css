@@ -1,0 +1,156 @@
+.dashboardContainer { 
+    display: flex;
+}
+
+.chartWrapper {
+    border: 1px solid #d3d3d3;
+    padding-top: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.contentWrapper { 
+    padding: 20px;
+    width: 100vw;
+    flex-grow: 1;
+    margin-left: 270px;
+}
+
+.topbar input { 
+    width: 343px;
+    height: 48px;
+    border: none;
+    outline: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+}
+
+.separator { 
+    border-top: 1px solid #d3d3d3;
+    margin: 20px 0;
+}
+
+.dateSection { 
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+}
+
+.dateWrapper { 
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dateSection p:nth-child(1) {
+    /* Your styles for the second p element go here */
+    font-size: 24px;
+    font-weight: 500;
+    font-style: bold;
+  }
+
+.dateSection p:nth-child(2) {
+    /* Your styles for the second p element go here */
+    background-color: black;
+    color: white;
+    padding: 6px 4px;
+    font-size: 14px;
+}
+
+.infoWrapper { 
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.infoWrapper p:nth-child(1) {
+    color: #272b30;
+    font-weight: 700;
+}
+
+.infoWrapper p:nth-child(2) {
+    font-size: 24px;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.infoWrapper p:nth-child(3) {
+    font-size: 12px;
+    color: #272b30;
+}
+
+.infoBox { 
+    height: 152px;
+    display: flex;
+    padding: 32px;
+    flex-direction: column;
+    line-height: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    max-width: 280px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.educationWrapper { 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    width: 100%;
+    height: 494px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.educationBox { 
+    width: 100%;
+    height: 98px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    padding: 18px 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.educationWrapper button { 
+    height: 36px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+
+.dataInfo { 
+    width: 100%;
+    height: 152px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    border: 1px solid red;
+}
+
+
+.educationInfo { 
+    line-height: 18px;
+}
+
+.educationInfo p:nth-child(2) { 
+    font-size: 24px;
+}
+
+.colWrapper {
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.dataWrapper { 
+    margin-top: 20px;
+    height: 300px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
