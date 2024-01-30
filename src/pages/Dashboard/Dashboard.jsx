@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import BarChart from '../../components/BarChart/Barchart'
+import Sidebar from '../../components/Sidebar/sidebar'
 import styles from './Dashboard.module.css'
 
 
@@ -42,9 +43,6 @@ function Dashboard() {
 
   return (
     <>
-    <div className={styles.dashboardContainer}>
-      {/* <Sidebar /> */}
-      <div className={styles.contentWrapper}>
         <div className={styles.topbar}>
           <div className="inputContainer">
             <input type="text" placeholder='Cari data apa?' />
@@ -138,8 +136,6 @@ function Dashboard() {
             </div>
           </div>
         </div>
-      </div>
-    </div>
     </>
   )
 }

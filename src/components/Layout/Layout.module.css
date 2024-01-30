@@ -1,0 +1,10 @@
+.dashboardContainer { 
+    display: flex;
+}
+
+.contentWrapper { 
+    padding: 20px;
+    width: 100vw;
+    flex-grow: 1;
+    background-color: #e6ecf3;   
+}

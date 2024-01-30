@@ -2,8 +2,7 @@
     width: 264px;
     height: 100vh;
     padding: 18px;
-    box-shadow: 5px 0 5px rgba(0, 0, 0, 0.1);
-    position: fixed;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
@@ -17,12 +16,27 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-  }
+    gap: 10px;
+}
+
+.menuItem { 
+  padding: 5px 0;
+  /* Additional styling for menu items */
+  padding: 8px 20px;
+  display: flex;
+  column-gap: 12px;
+  align-items: center;
+}
   
-  .menuItem {
-    padding: 10px 0;
-    /* Additional styling for menu items */
-  }
+.selected {
+  background-color: #606468;
+  border-radius: 16px;
+  color: white;
+}
+
+.menuItem i { 
+  font-size: 14px;
+}
 
 
 .sidebar img { 
