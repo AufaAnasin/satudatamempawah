@@ -1,0 +1,27 @@
+.cardWrapper { 
+    width: 15vw;
+    max-width: 15vw;
+    height: 12vh;
+    max-height: 12vh;
+    background-color: white;
+    border: 1px solid rgb(222, 222, 222);
+    border-radius: 8px;
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardWrapper:hover { 
+    border: 1px solid #436850;
+}
+
+.cardWrapper img { 
+    width: auto;
+    height: auto;
+    max-width: 50%; /* Set maximum width to 100% of its container */
+    max-height: 50%; /* Set maximum height to 100% of its container */
+    object-fit: contain; /* Maintain aspect ratio and fit the image within its container */
+    margin-bottom: 16px;
+}

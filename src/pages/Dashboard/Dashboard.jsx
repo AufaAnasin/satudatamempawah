@@ -2,7 +2,6 @@ import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import BarChart from '../../components/BarChart/Barchart'
-import Sidebar from '../../components/Sidebar/sidebar'
 import styles from './Dashboard.module.css'
 
 
@@ -103,35 +102,57 @@ function Dashboard() {
                     <p><b>3221 Sekolah</b></p>
                   </div>
                   <div className={styles.educationInfo}>
-                    <p><b>Jumlah SD</b></p>
-                    <p><b>3221 Sekolah</b></p>
+                    <p><b>Jumlah Siswa SD</b></p>
+                    <p><b>12560 Orang</b></p>
                   </div>
                 </div>
                 <div className={styles.educationBox}>
                   <div className={styles.educationInfo}>
-                    <p><b>Jumlah SD</b></p>
-                    <p><b>3221 Sekolah</b></p>
+                    <p><b>Jumlah SMP</b></p>
+                    <p><b>2590 Sekolah</b></p>
                   </div>
                   <div className={styles.educationInfo}>
-                    <p><b>Jumlah SD</b></p>
-                    <p><b>3221 Sekolah</b></p>
+                    <p><b>Jumlah Siswa SMP</b></p>
+                    <p><b>12213 Sekolah</b></p>
                   </div>
                 </div>
                 <div className={styles.educationBox}>
                   <div className={styles.educationInfo}>
-                    <p><b>Jumlah SD</b></p>
-                    <p><b>3221 Sekolah</b></p>
+                    <p><b>Jumlah Guru SD</b></p>
+                    <p><b>5124 Guru</b></p>
                   </div>
                   <div className={styles.educationInfo}>
-                    <p><b>Jumlah SD</b></p>
-                    <p><b>3221 Sekolah</b></p>
+                    <p><b>Jumlah Guru SMP</b></p>
+                    <p><b>7122 Guru</b></p>
                   </div>
                 </div>
                 <button>Lihat Lebih Lengkap</button>
               </div>
-              <div className={styles.dataWrapper}>
-
               </div>
+              <div className={styles.dataRow}>
+                  <div className={styles.dataWrapper}>
+                    <div className={styles.dataContainer}>
+                      <h3>789</h3>
+                      <div className={styles.dataDescription}>
+                          <p>Dataset</p>
+                          <p>Ketersediaan beragam informasi dalam dataset untuk Kabupaten Mempawah.</p>
+                      </div>
+                    </div>
+                    <div className={styles.dataContainer}>
+                      <h3>22</h3>
+                      <div className={styles.dataDescription}>
+                          <p>Organisasi Perangkat Daerah</p>
+                          <p>Berdasarkan OPD yang aktif di Kabupaten Mempawah.</p>
+                      </div>
+                    </div>
+                    <div className={styles.dataContainer}>
+                      <h3>10</h3>
+                      <div className={styles.dataDescription}>
+                          <p>Kategori</p>
+                          <p>Ragam topik dalam kategori dataset Kabupaten Mempawah.</p>
+                      </div>
+                    </div>
+                  </div>
               </div>
             </div>
           </div>

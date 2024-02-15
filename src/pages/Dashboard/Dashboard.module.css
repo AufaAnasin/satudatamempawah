@@ -159,9 +159,62 @@
 
 .dataWrapper { 
     margin-top: 20px;
-    height: 300px;
     width: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     border-radius: 8px;
     background-color: white;
+    padding: 30px 20px 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
+
+.dataDescription { 
+    display: flex;
+    flex-direction: column;
+    line-height: 8px;
+    margin-left: 30px;
+}
+
+.dataDescriptionWrapper { 
+    line-height: 10px;
+}
+
+.countData { 
+    line-height: 30px;
+}
+
+
+.dataWrapper p{ 
+    font-size: 18px;
+}
+
+.dataRow { 
+    display: flex;
+    gap: 20px;
+}
+
+.amountData { 
+    display: flex;
+    flex-direction: row;
+}
+
+.dataContainer { 
+    display: flex;
+}
+
+.dataContainer h3 {
+    font-size: 30px;
+    width: 60px; /* Adjust the width as needed */
+    text-align: center; /* Align the numbers to the right */
+}
+
+.dataDescription p:nth-child(2) {
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.dataDescription p:nth-child(1) {
+    font-weight: bold;
+}
+

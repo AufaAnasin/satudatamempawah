@@ -1,0 +1,79 @@
+.navbarWrapper { 
+  padding: 16px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
+  position: fixed;
+  width: 100%;
+  z-index: 1000; 
+  top: 0; 
+}
+
+.navbarPlaceholder {
+  height: 80px; /* Adjust height as needed */
+  transition: height 0.3s ease;
+}
+
+.showPlaceholder {
+  display: block;
+}
+
+.scrolled + .navbarPlaceholder {
+  height: 80px; /* Match the height of the navbar */
+}
+
+/* Add this style for transparent background */
+.navbarWrapper.transparent {
+    background-color: transparent;
+}
+
+/* Add this style for solid white background */
+.navbarWrapper.scrolled {
+    background-color: white;
+}
+
+.logoWrapper { 
+    display: flex;
+}
+
+.logoWrapper img { 
+    width: 80px;
+    height: auto;
+}
+.logoTextWrapper { 
+    display: flex;
+    flex-direction: column;
+    line-height: 2px;
+    justify-content: center;
+}
+
+.logoTextWrapper p:nth-child(1) { 
+    font-weight: bold;
+}
+
+.menuList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menuList li {
+  margin-right: 20px;
+}
+
+.menuList li:last-child {
+  margin-right: 0;
+}
+
+.menuList li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 12px;
+  transition: color 0.3s ease;
+}
+
+.menuList li a:hover {
+  color: #ffd700; /* Change color on hover */
+}
