@@ -1,0 +1,50 @@
+.leftFooter img { 
+    width: 90px;
+    height: auto;
+}
+
+.leftFooter { 
+    display: flex;
+    gap: 20px;
+    padding-left: 50px;
+    align-items: center;
+}
+
+.address i {
+    color: #61677A;
+    margin-right: 4px;
+}
+
+.address p { 
+    font-size: 12px;
+}
+
+.footerRow { 
+    margin: 10% 0 2% 0;
+}
+
+.address {
+    line-height: 1px;
+}
+
+.rightFooter p { 
+    font-size: 12px;
+}
+
+@media screen and (max-width: 900px) {
+    .address {
+        line-height: 15px;
+    }
+    .address p { 
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .address {
+        line-height: 18px;
+    }
+    .address p { 
+        font-size: 12px;
+    }
+}

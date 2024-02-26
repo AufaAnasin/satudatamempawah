@@ -77,3 +77,18 @@
 .menuList li a:hover {
   color: #ffd700; /* Change color on hover */
 }
+
+/* tablet in vertical mode */
+
+@media screen and (max-width: 900px) {
+  .navbarWrapper { 
+    padding: 16px 40px;
+  
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .navbarWrapper { 
+    display: none;
+  }
+}

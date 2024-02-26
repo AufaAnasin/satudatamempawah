@@ -16,13 +16,6 @@
     font-weight: 900;
 }
 
-.typographCol {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin: 0vh 0 0vh 10vw;
-}
-
 .typographWrapper h1 span {
     color: #1A5D1A;
 }
@@ -31,9 +24,11 @@
     background-color: #f7f8ed;
 }
 
-.ilustration { 
-    margin: 20vh 0 40vh 10vw;
+
+.rowStyle { 
+    padding: 20%;
 }
+
 
 .ilustration img { 
     width: 20vw;
@@ -58,7 +53,7 @@
 .inputContainer .searchIcon {
     position: absolute;
     top: 50%;
-    right: 8%;
+    right: 10%;
     transform: translateY(-50%);
     color: gray;
     cursor: pointer; /* Add cursor style for better usability */
@@ -75,16 +70,154 @@
 }
 
 .topicWrapperLayout {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Create 5 equal-width columns */
+    grid-gap: 10px; /* Set the gap between grid items */
+    justify-content: center; /* Center the grid horizontally */
     margin-top: 20px; /* Add space between the section above */
 }
 
 .topicWrapperLayout > * {
-    margin: 10px; /* Add margin around each topic card */
+    /* Adjust width and height as needed */
+    width: 100%; /* Each item takes up the entire width of its grid cell */
+    height: 100%; /* Each item takes up the entire height of its grid cell */
 }
+
 
 .topicWrapper h3 { 
     margin-bottom: 12px;
+}
+
+/* tablet in vertical mode */
+
+@media screen and (max-width: 900px) {
+    .typographWrapper h1 {
+        font-size: 24px;
+    }
+
+    .typographWrapper h2 {
+        font-size: 24px;
+    }
+    .inputContainer .searchIcon {
+        display: none;
+    }
+    .inputContainer input {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .topicWrapperLayout {
+        display: grid;
+        grid-template-columns: repeat(4, 3fr); /* Create 5 equal-width columns */
+        grid-gap: 10px; /* Set the gap between grid items */
+        justify-content: center; /* Center the grid horizontally */
+        margin-top: 20px; /* Add space between the section above */
+    }
+    
+    .topicWrapperLayout > * {
+        /* Adjust width and height as needed */
+        width: 100%; /* Each item takes up the entire width of its grid cell */
+        height: 100%; /* Each item takes up the entire height of its grid cell */
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    .topicWrapperLayout {
+        display: grid;
+        grid-template-columns: repeat(4, 3fr); /* Create 5 equal-width columns */
+        grid-gap: 10px; /* Set the gap between grid items */
+        justify-content: center; /* Center the grid horizontally */
+        margin-top: 20px; /* Add space between the section above */
+    }
+    
+    .topicWrapperLayout > * {
+        /* Adjust width and height as needed */
+        width: 100%; /* Each item takes up the entire width of its grid cell */
+        height: 100%; /* Each item takes up the entire height of its grid cell */
+    }
+
+}
+
+/* mobile */
+
+@media screen and (max-width: 500px) {
+    .topicWrapperLayout {
+        display: grid;
+        grid-template-columns: repeat(2, 3fr); /* Create 5 equal-width columns */
+        grid-gap: 10px; /* Set the gap between grid items */
+        justify-content: center; /* Center the grid horizontally */
+        margin-top: 20px; /* Add space between the section above */
+    }
+    
+    .topicWrapperLayout > * {
+        /* Adjust width and height as needed */
+        width: 100%; /* Each item takes up the entire width of its grid cell */
+        height: 100%; /* Each item takes up the entire height of its grid cell */
+    }
+
+    .typographWrapper { 
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+    }
+
+    .typoGraph { 
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .typographWrapper h1 {
+        font-size: 24px;
+    }
+    .typographWrapper h2 {
+        font-size: 16px;
+        width: 100%;
+    }
+    .rowStyle { 
+        padding-top: 50%;
+    }
+    .ilustration img { 
+        width: 70vw;
+        height: auto;
+    }
+    .ilustration { 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+    }
+
+    .inputContainer { 
+        display: flex;
+        justify-content: center;
+    }
+
+    .inputWrapper { 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border: 1px solid red;
+    }
+
+    .inputContainer input {
+        width: 230px;
+        height: 30px;
+        float: left;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .address {
+        line-height: 18px;
+    }
+    .inputContainer .searchIcon {
+        display: none;
+    }
 }

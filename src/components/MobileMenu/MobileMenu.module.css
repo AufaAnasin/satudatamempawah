@@ -1,0 +1,46 @@
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0px; /* Width of toggle icon */
+    height: 0vh; /* Full height of the screen */
+    background-color: #333;
+    color: #fff;
+    z-index: 1000;
+    transition: width 0.3s;
+  }
+  
+  .open {
+    width: 100vw;
+    height: 100vh; /* Expand to cover the entire screen */
+  }
+  
+  .toggle-icon {
+    cursor: pointer;
+    padding: 20px;
+    color: black;
+  }
+  
+  .menu-links {
+    padding-top: 60px; /* Height of toggle icon */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menu-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .menu-links a:hover {
+    background-color: #555;
+  }
+@media screen and (min-width: 650px) {
+    .menu { 
+        display: none;
+    }
+} 
+  
