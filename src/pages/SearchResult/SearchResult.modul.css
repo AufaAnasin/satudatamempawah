@@ -1,0 +1,74 @@
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Lebarkan form untuk mengisi lebar kontainer */
+  max-width: 600px; /* Batasi lebar maksimum agar tidak terlalu lebar */
+}
+
+.search-input {
+  flex: 1; /* Gunakan ruang tersisa di dalam form */
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.search-button {
+  background-color: transparent; /* Mengatur latar belakang transparan */
+  color: #ffffff; /* Warna teks untuk tombol */
+  border: 1px solid #ffffff; /* Garis pinggir untuk memberikan sedikit ketebalan */
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 7px; /* Tambahkan padding agar tombol lebih besar */
+  margin-left: -40px; /* Geser tombol ke kiri agar masuk ke dalam input */
+}
+
+.search-button img {
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+}
+
+/* SearchResult.modul.css */
+
+.search-container {
+  margin-bottom: 20px; /* Menambahkan jarak bawah antara search container dan tabel */
+  background-color: transparent;
+}
+
+.search-form {
+  margin-bottom: 10px; /* Menambahkan jarak bawah antara form pencarian dan tabel */
+}
+
+/* Opsional: Anda dapat menambahkan jarak atas dan bawah antara tabel dan elemen sebelumnya (form pencarian) */
+.table-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.fixed-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fixed-table th, .fixed-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.fixed-table th {
+  background-color: #f2f2f2;
+}
+
+.kategori-column {
+  width: 200px; /* Atur lebar kolom kategori */
+}
+
+
