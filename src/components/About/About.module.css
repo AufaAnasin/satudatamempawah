@@ -1,0 +1,45 @@
+/* About.module.css */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Sesuaikan dengan tinggi halaman */
+  }
+  
+  .content {
+    max-width: 800px;
+    text-align: center;
+  }
+  
+  .header {
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    text-align: justify;
+  }
+  
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .imageContainer {
+    margin-right: 20px;
+  }
+  
+  .imageContainer img {
+    max-width: 100px;
+  }
+  
+  .imageText {
+    font-size: 14px;
+  }
+  
+  .imageText p {
+    margin: 5px 0;
+    text-align: left;
+  }
+  

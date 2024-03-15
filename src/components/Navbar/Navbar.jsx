@@ -39,7 +39,7 @@ function Navbar() {
                         <li><a href="/dashboard">Dashboard</a></li>
                         <li><a href="#">Dataset</a></li>
                         <li><a href="#">Organisasi</a></li>
-                        <li><a href="#">Tentang</a></li>
+                        <li><a href="/tentang">Tentang</a></li>
                     </ul>
                 </div>
             </div>

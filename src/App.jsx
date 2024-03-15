@@ -9,6 +9,8 @@ import Education from './pages/Education/Education';
 import Healthcare from './pages/Healthcare/Healthcare';
 import Landingpage from './pages/LandingPage/Landingpage';
 import Searchresult from './pages/SearchResult/searchresult';
+import FormUpload from './pages/Formupload/FormUpload';
+import About from './components/About/About';
 
 
 function App() {
@@ -18,7 +20,10 @@ function App() {
     { path: 'infrastruktur', element: <Infrastructure /> },
     { path: 'pendidikan', element: <Education /> },
     { path: 'kesehatan', element: <Healthcare /> },
-    { path: 'result', element: <Searchresult /> } 
+    { path: 'result', element: <Searchresult /> },
+    { path: 'upload', element: <FormUpload /> },
+    { path: 'tentang', element: <About /> }
+
   ]);
 
   // Check if the current route is not the Landingpage route
