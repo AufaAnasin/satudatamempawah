@@ -13,7 +13,7 @@ function MobileMenu() {
         <div className={`${styles.menu} ${isOpen ? styles.open : ''}`}>
             <div className={styles['toggle-icon']} onClick={toggleMenu}>
                 {/* Toggle icon */}
-                {isOpen ? <>&#x2715;</> : <>&#x2630;</>}
+                {isOpen ? <><img src="/src/assets/logo.png" alt="" /></> : <><img src="/src/assets/logo.png" alt="" /></>}
             </div>
             {/* Conditionally render menu links based on isOpen state */}
             {isOpen && (

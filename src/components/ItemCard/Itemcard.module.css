@@ -1,0 +1,53 @@
+.itemcardWrapper {
+    border-radius: 8px;
+    height: 136px;
+    width: calc(100% - 32px); /* Adjusted width to account for padding */
+    padding: 20px 16px;
+    box-shadow: 0 0 10px rgba(247, 248, 237, 0.2);
+    background-color: white;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease;
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+
+.itemcardWrapper:hover { 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.itemcardWrapper p:nth-child(1) {
+    font-weight: bold;
+    font-size: 18px;
+    color: #030303;
+    margin-bottom: 2px;
+}
+
+
+.itemcardWrapper p:nth-child(2) {
+    font-weight: lighter;
+    font-size: 14px;
+    color: #030303;
+    /* overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; */
+    /* width: 80%; */
+    margin-bottom: 2px;
+    max-width: 90%; /* Limit the maximum width */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+.itemcardWrapper p:nth-child(3) {
+    font-weight: lighter;
+    font-size: 16px;
+    color: #2b2b2b;
+    margin-bottom: 2px;
+}
+
+.filetypeWrapper h1 { 
+    color: white;
+    font-size: 14px;
+    width: fit-content;
+    padding: 4px 4px;
+    background-color: green;
+    border-radius: 8px;
+}

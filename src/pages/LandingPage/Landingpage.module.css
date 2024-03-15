@@ -2,6 +2,25 @@
     width: 90%;
 }
 
+.searchButton { 
+    height: 40px;
+    width: auto;
+    padding: 0px 16px;
+    margin-top: 12px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    background-color: #1A5D1A;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+.searchButton:hover { 
+    background-color: transparent;
+    color: #1A5D1A;
+    border: 1px solid #1A5D1A;
+    animation: pulse 0.5s infinite alternate;
+}
+
 .typographWrapper h2 {
     width: 90%;
     font-weight: bold;
