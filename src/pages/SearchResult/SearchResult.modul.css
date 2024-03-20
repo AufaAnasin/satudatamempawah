@@ -5,6 +5,10 @@
   margin-top: 20px;
 }
 
+.result { 
+  padding: 20px;
+}
+
 .search-form {
   display: flex;
   align-items: center;

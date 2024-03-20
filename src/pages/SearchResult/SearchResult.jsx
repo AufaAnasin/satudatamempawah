@@ -30,7 +30,7 @@ function Search() {
   console.log(data);
 
 return (
-  <div className="container">
+  <div className="container result">
     <form className="search-form">
       <input
         type="text"
@@ -45,7 +45,7 @@ return (
     <div className="table-container">
        {/* Item Component goes here later */}
        {data && data.map((item) => (
-        <ItemCard key={item.id} author={item.author} title={item.title} notes={item.notes} />
+        <ItemCard key={item.id} author={item.author} title={item.title} notes={item.notes} name={item.name} />
        ))}
     </div>
   </div>

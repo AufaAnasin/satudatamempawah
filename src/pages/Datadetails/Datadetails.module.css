@@ -1,0 +1,63 @@
+.dataDetailsWrapper { 
+    padding: 100px 20px;
+}
+
+.dataTitle h3 { 
+    margin-bottom: 0;
+    font-size: 24px;
+}
+
+.dataTitle p:nth-child(2) { 
+    margin-bottom: 0;
+}
+
+.dataTitle p:nth-child(3) {
+    color: #7f7f7f;
+}
+
+.dataTitle p {
+    font-size: 14px;
+}
+
+.tabContainer {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tab {
+    position: relative;
+    padding: 12px 24px;
+    margin-right: 4px;
+    cursor: pointer;
+    border-bottom: 2px solid #adb2c0;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease; /* Add transition for color and border bottom color */
+    color: #7f7f7f; /* Default tab color */
+}
+
+.tab:focus {
+    outline: none;
+    border-bottom: 2px solid #3164f4;
+}
+
+.tab.active {
+    color: #3164f4; /* Active tab color */
+    border-bottom: 2px solid #3164f4; /* Active tab border bottom color */
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content; /* Adjust the width to fit the text */
+    height: 2px;
+    background-color: #3164f4;
+    transition: width 0.3s ease; /* Add transition for width */
+}
+
+.tab:last-child::after {
+    display: none; /* Ensure last tab doesn't have underline */
+}
