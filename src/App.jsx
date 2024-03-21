@@ -11,16 +11,16 @@ import Landingpage from './pages/LandingPage/Landingpage';
 import Searchresult from './pages/SearchResult/searchresult';
 import Datadetails from './pages/Datadetails/Datadetails';
 
+
 function App() {
   const elements = useRoutes([
-    { path: '/', element: <Landingpage /> }, // Changed path to '/'
-    { path: '/dashboard', element: <Dashboard /> },
-    { path: '/infrastruktur', element: <Infrastructure /> },
-    { path: '/pendidikan', element: <Education /> },
-    { path: '/kesehatan', element: <Healthcare /> },
-    { path: '/result', element: <Searchresult /> },
-    { path: '/details', element: <Datadetails /> },
-    { path: '/', element: <Searchresult /> }  
+    { path: '', element: <Landingpage /> },
+    { path: 'dashboard', element: <Dashboard /> },
+    { path: 'infrastruktur', element: <Infrastructure /> },
+    { path: 'pendidikan', element: <Education /> },
+    { path: 'kesehatan', element: <Healthcare /> },
+    { path: 'result', element: <Searchresult /> },
+    { path: '/details', element: <Datadetails /> } 
   ]);
 
   // Check if the current route is not the Landingpage or Searchresult route
