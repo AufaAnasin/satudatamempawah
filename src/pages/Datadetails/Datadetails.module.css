@@ -101,11 +101,13 @@ td:first-child {
     font-weight: bold; /* Membuat teks tebal */
     vertical-align: middle; /* Mengatur posisi vertikal ke tengah */
     padding: 20px; /* Menambahkan padding untuk meningkatkan ketinggian */
+    font-size: 19px; /* Ukuran teks diperbesar */
+    font-weight: bold; /* Membuat teks tebal */
 }
 
-/* Mengatur ukuran teks */
-th:first-child,
-td:first-child {
-    font-size: 21px; /* Ukuran teks diperbesar */
-    font-weight: bold; /* Membuat teks tebal */
+
+td:nth-child(2) {
+    width: 50%;
+    font-size: 15px; 
+    text-align: justify; 
 }
