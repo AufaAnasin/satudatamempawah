@@ -61,3 +61,51 @@
 .tab:last-child::after {
     display: none; /* Ensure last tab doesn't have underline */
 }
+
+.table-container {
+    margin: auto; /* Membuat tabel berada di tengah */
+    width: 50%; /* Atur lebar tabel */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Menggabungkan batas */
+}
+
+th, td {
+    border: none; /* Menghapus batas bawa dan kiri */
+    border-bottom: 1px solid #000; /* Menambahkan batas bawah */
+    padding: 8px; /* Menambahkan padding */
+    text-align: left; /* Menyusun teks ke kiri */
+}
+
+/* Membuat batas bawah untuk semua baris kecuali baris terakhir */
+tr:not(:last-child) {
+    position: relative;
+}
+
+tr:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0%;
+    border-bottom: 1px solid #000;
+}
+
+/* Kolom pertama */
+th:first-child,
+td:first-child {
+    width: 50%; /* Menetapkan lebar */
+    font-size: 18px; /* Ukuran teks diperbesar */
+    font-weight: bold; /* Membuat teks tebal */
+    vertical-align: middle; /* Mengatur posisi vertikal ke tengah */
+    padding: 20px; /* Menambahkan padding untuk meningkatkan ketinggian */
+}
+
+/* Mengatur ukuran teks */
+th:first-child,
+td:first-child {
+    font-size: 21px; /* Ukuran teks diperbesar */
+    font-weight: bold; /* Membuat teks tebal */
+}

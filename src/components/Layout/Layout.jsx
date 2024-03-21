@@ -1,6 +1,6 @@
 import React from 'react'
-import Sidebar from '../Sidebar/sidebar'
 import styles from './Layout.module.css'
+import Sidebar from '../Sidebar/Sidebar'
 
 function Layout({children}) {
   return (

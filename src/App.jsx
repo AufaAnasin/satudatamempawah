@@ -8,8 +8,8 @@ import Layout from './components/Layout/Layout';
 import Education from './pages/Education/Education';
 import Healthcare from './pages/Healthcare/Healthcare';
 import Landingpage from './pages/LandingPage/Landingpage';
-import Searchresult from './pages/SearchResult/searchresult';
 import Datadetails from './pages/Datadetails/Datadetails';
+import Search from './pages/SearchResult/SearchResult';
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
     { path: 'infrastruktur', element: <Infrastructure /> },
     { path: 'pendidikan', element: <Education /> },
     { path: 'kesehatan', element: <Healthcare /> },
-    { path: 'result', element: <Searchresult /> },
+    { path: 'result', element: <Search /> },
     { path: '/details', element: <Datadetails /> } 
   ]);
 
