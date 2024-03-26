@@ -111,3 +111,40 @@ td:nth-child(2) {
     font-size: 15px; 
     text-align: justify; 
 }
+
+/* Tambahkan styling untuk tabel pada mode mobile */
+@media only screen and (max-width: 768px) {
+    .table-container {
+      overflow-x: auto;
+      width: 150%;
+      margin-top: 20px; /* Sesuaikan margin dengan kebutuhan */
+      
+    }
+  
+    table {
+      width: 200%;
+      border-collapse: collapse;
+      border-spacing: 0; /* Hapus jarak antar sel */
+      display: grid; /* Menggunakan CSS Grid */
+      
+    }
+  
+    tr {
+      display: grid;
+      grid-template-columns: 1fr; /* Satu kolom */
+      border-bottom: 0px solid #dddddd; /* Garis antar baris */
+      
+    }
+  
+    td, th {
+      padding: 9px; /* Sesuaikan padding dengan kebutuhan */
+      text-align: center;
+    }
+
+    td:nth-child(2) {
+
+        text-align: center ; 
+    }
+  }
+  
+  

@@ -20,7 +20,7 @@ function App() {
     { path: 'pendidikan', element: <Education /> },
     { path: 'kesehatan', element: <Healthcare /> },
     { path: 'result', element: <Search /> },
-    { path: '/details', element: <Datadetails /> } 
+    { path: 'details', element: <Datadetails /> } 
   ]);
 
   // Check if the current route is not the Landingpage or Searchresult route
