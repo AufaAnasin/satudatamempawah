@@ -112,6 +112,26 @@ td:nth-child(2) {
     text-align: justify; 
 }
 
+.centeredButton {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.backButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.backButton:hover {
+    background-color: #0056b3;
+}
+
+
 /* Tambahkan styling untuk tabel pada mode mobile */
 @media only screen and (max-width: 768px) {
     .table-container {

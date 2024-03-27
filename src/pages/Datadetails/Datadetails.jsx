@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
 import MobileMenu from '../../components/MobileMenu/MobileMenu';
 import style from './Datadetails.module.css';
@@ -42,49 +42,52 @@ function Datadetails() {
                             </div>
                         </TabPanel>
                         <TabPanel>
-                        <div className="table-container">
-             <table>
-                <tbody>
-                    {/* Baris 1 */}
-                    <tr>
-                        <td>Definisi Data</td>
-                        <td>prasarana transportasi darat yang meliputi segala bagian jalan, termasuk bangunan pelengkap dan perlengkapannya yang diperuntukkan bagi lalu lintas, yang berada pada permukaan tanah, di atas permukaan tanah, di bawah permukaan tanah dan/atau air, serta di atas permukaan air, kecuali jalan kereta api, jalan lori, dan jalan kabel. </td>
-                    </tr>
-                    {/* Baris 2 */}
-                    <tr>
-                        <td>Waktu Dibuat</td>
-                        <td>January 31, 2024, 9:49 AM </td>
-                    </tr>
-                    {/* Baris 3 */}
-                    <tr>
-                        <td>Terakhir Dibuat</td>
-                        <td>April 21, 2024, 9:49 AM </td>
-                    </tr>
-                    {/* Baris 4 */}
-                    <tr>
-                        <td>Klasifikasi</td>
-                        <td>1. Baik 2. Rusak Sedang 3. Rusak Ringan 4. Rusak Berat 5. Tidak diketahui </td>
-                    </tr>
-                    {/* Baris 5 */}
-                    <tr>
-                        <td>Konsep</td>
-                        <td>Jalan</td>
-                    </tr>
-                    {/* Baris 6 */}
-                    <tr>
-                        <td>Satuan</td>
-                        <td>Kilometer</td>
-                    </tr>
-                    {/* Baris 7 */}
-                    <tr>
-                        <td>Ukuran</td>
-                        <td>Panjang Jalan</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+                            <div className="table-container">
+                                <table>
+                                    <tbody>
+                                        {/* Baris 1 */}
+                                        <tr>
+                                            <td>Definisi Data</td>
+                                            <td>prasarana transportasi darat yang meliputi segala bagian jalan, termasuk bangunan pelengkap dan perlengkapannya yang diperuntukkan bagi lalu lintas, yang berada pada permukaan tanah, di atas permukaan tanah, di bawah permukaan tanah dan/atau air, serta di atas permukaan air, kecuali jalan kereta api, jalan lori, dan jalan kabel. </td>
+                                        </tr>
+                                        {/* Baris 2 */}
+                                        <tr>
+                                            <td>Waktu Dibuat</td>
+                                            <td>January 31, 2024, 9:49 AM </td>
+                                        </tr>
+                                        {/* Baris 3 */}
+                                        <tr>
+                                            <td>Terakhir Dibuat</td>
+                                            <td>April 21, 2024, 9:49 AM </td>
+                                        </tr>
+                                        {/* Baris 4 */}
+                                        <tr>
+                                            <td>Klasifikasi</td>
+                                            <td> 1. Baik 2. Rusak Sedang 3. Rusak Ringan 4. Rusak Berat 5. Tidak diketahui </td>
+                                        </tr>
+                                        {/* Baris 5 */}
+                                        <tr>
+                                            <td>Konsep</td>
+                                            <td>Jalan</td>
+                                        </tr>
+                                        {/* Baris 6 */}
+                                        <tr>
+                                            <td>Satuan</td>
+                                            <td>Kilometer</td>
+                                        </tr>
+                                        {/* Baris 7 */}
+                                        <tr>
+                                            <td>Ukuran</td>
+                                            <td>Panjang Jalan</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </TabPanel>
                     </Tabs>
+                </div>
+                <div className={style.centeredButton}>
+                    <Link to="/" className={style.backButton}>Kembali</Link>
                 </div>
             </div>
         </>
