@@ -15,7 +15,7 @@ function Landingpage() {
 
 
   const handleSearch = () => {
-    navigate(`/result?query=${search}`)
+    navigate(`/result?q=${search}`)
   }
 
   return (

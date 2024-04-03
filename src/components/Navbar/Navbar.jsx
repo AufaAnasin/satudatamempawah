@@ -36,10 +36,10 @@ function Navbar() {
             <div className={styles.navbarItems}>
                 <div >
                     <ul className={styles.menuList}>
-                        <li><a href="/dashboard">Dashboard</a></li>
-                        <li><a href="#">Dataset</a></li>
-                        <li><a href="#">Organisasi</a></li>
-                        <li><a href="/tentang">Tentang</a></li>
+                        <li><a href="/">Utama</a></li>
+                        <li><a href="/result">Dataset</a></li>
+                        <li><a href="/organisasi">Organisasi</a></li>
+                        <li><a href="/about">Tentang</a></li>
                     </ul>
                 </div>
             </div>

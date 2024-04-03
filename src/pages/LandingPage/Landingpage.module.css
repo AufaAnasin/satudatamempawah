@@ -10,14 +10,14 @@
     border-radius: 8px;
     border: none;
     color: white;
-    background-color: #1A5D1A;
+    background-color: var(--fourth-color);
     transition: background-color 0.3s, color 0.3s, border 0.3s;
 }
 
 .searchButton:hover { 
     background-color: transparent;
-    color: #1A5D1A;
-    border: 1px solid #1A5D1A;
+    color: var(--fourth-color);
+    border: 1px solid var(--fourth-color);
     animation: pulse 0.5s infinite alternate;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .typographWrapper h2 span {
-    color: #1A5D1A;
+    color: var(--fourth-color);;
 }
 
 
@@ -36,11 +36,11 @@
 }
 
 .typographWrapper h1 span {
-    color: #1A5D1A;
+    color: var(--fourth-color);
 }
 
 .hero { 
-    background-color: #f7f8ed;
+    background-color: var(--primary-color);
 }
 
 

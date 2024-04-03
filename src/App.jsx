@@ -10,6 +10,9 @@ import Healthcare from './pages/Healthcare/Healthcare';
 import Landingpage from './pages/LandingPage/Landingpage';
 import Datadetails from './pages/Datadetails/Datadetails';
 import Search from './pages/SearchResult/SearchResult';
+import About from './pages/About/About';
+import Organization from './pages/Organization/Organization';
+
 
 
 function App() {
@@ -20,11 +23,13 @@ function App() {
     { path: 'pendidikan', element: <Education /> },
     { path: 'kesehatan', element: <Healthcare /> },
     { path: 'result', element: <Search /> },
-    { path: 'details', element: <Datadetails /> } 
+    { path: 'details', element: <Datadetails /> },
+    { path: 'about', element: <About /> },
+    { path: 'organisasi', element: <Organization /> }   
   ]);
 
   // Check if the current route is not the Landingpage or Searchresult route
-  const isLandingOrResultPage = window.location.pathname === '/' || window.location.pathname === '/result' || window.location.pathname === '/details';
+  const isLandingOrResultPage = window.location.pathname === '/' || window.location.pathname === '/result' || window.location.pathname === '/details' || window.location.pathname === '/about' || window.location.pathname === '/organisasi';
   const renderLayout = !isLandingOrResultPage;
 
   return (

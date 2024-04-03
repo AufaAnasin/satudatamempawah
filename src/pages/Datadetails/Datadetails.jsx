@@ -5,17 +5,39 @@ import MobileMenu from '../../components/MobileMenu/MobileMenu';
 import style from './Datadetails.module.css';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import axios from 'axios';
 
 function Datadetails() {
     const location = useLocation();
     const [name, setName] = useState();
     const [activeTab, setActiveTab] = useState(0);
+    const [data, setData] = useState([]);
+    const [error, setError] = useState(null);
+    const [graphData, setGraphData] = useState([]);
 
     useEffect(() => {
         const searchParams = new URLSearchParams(location.search);
         const name = searchParams.get('name');
         setName(name);
+
+        const fetchData = async () => {
+            try { 
+                let apiUrl = `http://satudata.mempawahkab.go.id/api/3/action/package_show?id=${name}`;
+                if (name) {
+                    const response = await axios.get(apiUrl);
+                    setData(response.data.result || []);
+                }
+            } catch(error) {
+                console.error('Error fetching data:', error);
+                setError('Error fetching data. Please try again later.');
+            }
+        };
+        fetchData();
     }, [location.search]);
+
+    // Check if data exists and has resources before accessing its properties
+    const resourceId = data?.resources && data.resources.length > 0 ? data.resources[0].id : null;
+    console.log("ID", resourceId);
 
     return (
         <>
@@ -24,9 +46,9 @@ function Datadetails() {
             <div className={`container ${style.dataDetailsWrapper}`}>
                 <div className="row">
                     <div className={style.dataTitle}>
-                        <h3>Kondisi Jalan di Kab. Mempawah tahun 2019</h3>
-                        <p>Dataset terkait topik jalan ini dihasilkan oleh Dinas PUPR yang dikeluarkan dalam periode 1 tahun sekali.</p>
-                        <p>dibuat oleh Dinas Pekerjaan Umum dan Penataan Ruang</p>
+                        <h3>{data?.title}</h3>
+                        <p>{data?.notes}</p>
+                        <p>dibuat oleh {data?.author}</p>
                     </div>
                 </div>
                 <div className="row">
@@ -42,47 +64,26 @@ function Datadetails() {
                             </div>
                         </TabPanel>
                         <TabPanel>
-                            <div className="table-container">
-                                <table>
-                                    <tbody>
-                                        {/* Baris 1 */}
-                                        <tr>
-                                            <td>Definisi Data</td>
-                                            <td>prasarana transportasi darat yang meliputi segala bagian jalan, termasuk bangunan pelengkap dan perlengkapannya yang diperuntukkan bagi lalu lintas, yang berada pada permukaan tanah, di atas permukaan tanah, di bawah permukaan tanah dan/atau air, serta di atas permukaan air, kecuali jalan kereta api, jalan lori, dan jalan kabel. </td>
-                                        </tr>
-                                        {/* Baris 2 */}
-                                        <tr>
-                                            <td>Waktu Dibuat</td>
-                                            <td>January 31, 2024, 9:49 AM </td>
-                                        </tr>
-                                        {/* Baris 3 */}
-                                        <tr>
-                                            <td>Terakhir Dibuat</td>
-                                            <td>April 21, 2024, 9:49 AM </td>
-                                        </tr>
-                                        {/* Baris 4 */}
-                                        <tr>
-                                            <td>Klasifikasi</td>
-                                            <td> 1. Baik 2. Rusak Sedang 3. Rusak Ringan 4. Rusak Berat 5. Tidak diketahui </td>
-                                        </tr>
-                                        {/* Baris 5 */}
-                                        <tr>
-                                            <td>Konsep</td>
-                                            <td>Jalan</td>
-                                        </tr>
-                                        {/* Baris 6 */}
-                                        <tr>
-                                            <td>Satuan</td>
-                                            <td>Kilometer</td>
-                                        </tr>
-                                        {/* Baris 7 */}
-                                        <tr>
-                                            <td>Ukuran</td>
-                                            <td>Panjang Jalan</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                            {error ? (
+                                <div className={style.error}>{error}</div>
+                            ) : (
+                                <div className="table-container">
+                                    {data.extras && data.extras.length > 0 ? (
+                                        <table>
+                                            <tbody>
+                                                {data.extras.map((item, index) => (
+                                                    <tr key={index}>
+                                                        <td>{item.key}</td>
+                                                        <td>{item.value}</td>
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        </table>
+                                    ) : (
+                                        <div>Tidak ada data extra tersedia.</div>
+                                    )}
+                                </div>
+                            )}
                         </TabPanel>
                     </Tabs>
                 </div>

@@ -75,7 +75,7 @@
 }
 
 .menuList li a:hover {
-  color: #ffd700; /* Change color on hover */
+  color: var(--secondary-color); /* Change color on hover */
 }
 
 /* tablet in vertical mode */

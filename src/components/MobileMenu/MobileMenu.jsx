@@ -18,10 +18,10 @@ function MobileMenu() {
             {/* Conditionally render menu links based on isOpen state */}
             {isOpen && (
                 <div className={styles['menu-links']}>
-                    <Link to="/">Dashboard</Link>
+                    <Link to="/">Utama</Link>
                     <Link to="/page1">Dataset</Link>
                     <Link to="/page2">Organisasi</Link>
-                    <Link to="/page3">Tentang</Link>
+                    <Link to="/about">Tentang</Link>
                 </div>
             )}
         </div>
