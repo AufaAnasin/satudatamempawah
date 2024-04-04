@@ -13,7 +13,7 @@ function Datadetails() {
     const [activeTab, setActiveTab] = useState(0);
     const [data, setData] = useState([]);
     const [error, setError] = useState(null);
-    const [graphData, setGraphData] = useState([]);
+    const [graphData, setGraphData] = useState(null);
 
     useEffect(() => {
         const searchParams = new URLSearchParams(location.search);
@@ -21,7 +21,7 @@ function Datadetails() {
         setName(name);
 
         const fetchData = async () => {
-            try { 
+            try {
                 let apiUrl = `http://satudata.mempawahkab.go.id/api/3/action/package_show?id=${name}`;
                 if (name) {
                     const response = await axios.get(apiUrl);
@@ -32,12 +32,21 @@ function Datadetails() {
                 setError('Error fetching data. Please try again later.');
             }
         };
-        fetchData();
-    }, [location.search]);
 
-    // Check if data exists and has resources before accessing its properties
-    const resourceId = data?.resources && data.resources.length > 0 ? data.resources[0].id : null;
-    console.log("ID", resourceId);
+        const fetchGraphData = async () => {
+            try {
+                let graphUrl = `https://satudata.mempawahkab.go.id/api/3/action/datastore_search?resource_id=754ff29c-a1ef-4eca-9110-5f1a3d0c226e`;
+                const response = await axios.get(graphUrl);
+                setGraphData(response.data);
+            } catch (error) {
+                console.error('Error fetching graph data:', error);
+                setError('Error fetching graph data. Please try again later.');
+            }
+        };
+
+        fetchData();
+        fetchGraphData();
+    }, [location.search]);
 
     return (
         <>
@@ -46,9 +55,9 @@ function Datadetails() {
             <div className={`container ${style.dataDetailsWrapper}`}>
                 <div className="row">
                     <div className={style.dataTitle}>
-                        <h3>{data?.title}</h3>
-                        <p>{data?.notes}</p>
-                        <p>dibuat oleh {data?.author}</p>
+                        <h3>{data.title}</h3>
+                        <p>{data.notes}</p>
+                        <p>dibuat oleh {data.author}</p>
                     </div>
                 </div>
                 <div className="row">
@@ -60,7 +69,11 @@ function Datadetails() {
                         <TabPanel>
                             <div className={style.tabContentContainer}>
                                 <h2>Content 1</h2>
-                                <p>This is the content for tab 1</p>
+                                {graphData ? (
+                                    <p>{graphData.result}</p>
+                                ) : (
+                                    <p>Loading graph data...</p>
+                                )}
                             </div>
                         </TabPanel>
                         <TabPanel>
@@ -80,7 +93,7 @@ function Datadetails() {
                                             </tbody>
                                         </table>
                                     ) : (
-                                        <div>Tidak ada data extra tersedia.</div>
+                                        <div>No extra data available.</div>
                                     )}
                                 </div>
                             )}
@@ -88,7 +101,7 @@ function Datadetails() {
                     </Tabs>
                 </div>
                 <div className={style.centeredButton}>
-                    <Link to="/" className={style.backButton}>Kembali</Link>
+                    <Link to="/" className={style.backButton}>Back</Link>
                 </div>
             </div>
         </>
